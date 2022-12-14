@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------------------------------------------------------------------->
+    <link href={% static 'css/bootstrap.min.css' %} rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>-->
+    <!--------------------------------------------------------------------->
+    <script src="https://kit.fontawesome.com/6e99fc466c.js" crossorigin="anonymous"></script>
+    <!--------------------------------------------------------------------->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/stylesheet.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'materials/images/favicon.png' %}" type="image/x-icon">
+
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+  {% block header %}
+  <header class="position-relative">
+    <nav class="navbar navbar-expand-sm fixed-top bg-light bg-opacity-10">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="{% static 'materials/images/rosamaria-logo.png' %}" alt="logo da rosa maria" width="150px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#about">SOBRE NÓS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#work">NOSSO TRABALHO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#catalog">CATÁLAGO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#rodape">FALE CONOSCO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--<div>
+        <nav class="navbar navbar-expand-sm fixed-top bg-light bg-opacity-10">
+          <div class="container">
+            <a href="#" class="navbar-brand">
+              <img src="{% static 'materials/images/rosamaria-logo.png' %}" alt="logo da rosa maria" width="150px">
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+  
+            <div class="collapse navbar-collapse justify-content-end" id="nav-principal">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link text-dark ">Home--> <!--<strong class="link-borda">|</strong>--><!--</a
+                </li>
+                <li class="nav-item">
+                  <a href="#sobre" class="nav-link text-dark">Sobre--> <!--<strong class="link-borda">|</strong>--><!--</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contatos" class="nav-link text-dark">Contatos--> <!--<strong class="link-borda">|</strong>--><!--</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#precos" class="nav-link text-dark">Preços</a>--><!--
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>        
+    </div>-->
+
+    <div class="container-fluid m-0 p-0 m-auto">
+      <img src="{% static 'materials/images/header-carrossel.png' %}" alt="" height="100%" width="100%">
+
+    </div>
+    </header><!--/fim Cabecalho -->
+    {% endblock header %}
+    {% block content %} {% endblock content %}
+
+    {% block footer %}
+    <footer id="rodape" class="container-fluid row col-12 margem-divisao-secao"><!--Inicio Terceira Secao-->
+      <div class="col-10 margem-divisao-secao text-center">
+          <div>
+             <h2 class="titulo-secao-terceira-secao">Fale com a Gente!</h2>
+          </div>
+          <div class="col-12 fonte-terceira-secao"><!--Seção pra texto-->
+              <p>Estamos sempre em busca de novas <strong>parcerias e desafios</strong>.</p>
+              <a class="nav-link" href="/contact"><i class="fa-regular fa-hand-point-right mx-1"></i><strong><u>Envie um e-mail</u></strong> e faça parte da nossa comunidade!</a>
+          </div>
+      </div>
+
+      <div class="container-fluid row col-12 m-auto">
+          <div class="col-md-4 col-12 text-center mb-4">
+            <h6><strong>CONTATO COMERCIAL</strong></h6>
+            <P>Negócios e Parceiros</P>
+            <a class="nav-link" href="mailto: comercial@rosamaria.net"><i class="fa-solid fa-envelope mx-1"></i><strong>comercial</strong>@rosamaria.net</a>
+            <a class="nav-link" href="tel:+5547988739094"><i class="fa-brands fa-whatsapp mx-1"></i>(47) 98873.9094</a>
+          </div>
+
+          <div class="col-md-4 col-12 text-center mb-4">
+            <h6><strong>CONTATO TERCERIZADOS</strong></h6>
+            <P>Serviços Tercerizados</P>
+            <a class="nav-link" href="mailto: comercial@rosamaria.net"><i class="fa-solid fa-envelope mx-1"></i><strong>subcontratados</strong>@rosamaria.net</a>
+            <a class="nav-link" href="tel:+554730441313"><i class="fa-solid fa-phone mx-1"></i></i>(47) 3044.1313</a>
+            <a class="nav-link" href="tel:+554730874477"><i class="fa-solid fa-phone mx-1"></i></i>(47) 3087.4477</a>
+            <a class="nav-link" href="tel:+5547988739094"><i class="fa-brands fa-whatsapp mx-1"></i>(47) 98873.9094</a>
+          </div>
+
+          <div class="col-md-4 col-12 text-center mb-4">
+            <h6><strong>CONTATO RH</strong></h6>
+            <P>Trabalhe conosco!</P>
+            <P>Envie seu CV ou CNPJ para:</P>
+            <a class="nav-link" href="https://gruporosamaria.solides.jobs/"><i class="fa-solid fa-globe mx-1"></i>Solides Jobs</a>
+            <a class="nav-link" href="tel:+5547988739094"><i class="fa-brands fa-whatsapp mx-1"></i>(47) 98873.9094</a>
+          </div>
+
+          <div class="col-md-4 col-12 text-center mb-4 mt-3">
+                <h6><strong>Rosa Maria</strong></h6>
+                <address>Rua Gregório Diegoli, Nº 90,<br>Bairro São Luiz, Brusque - SC</address>
+                <a href="https://www.instagram.com/rosamariafitness/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="https://www.facebook.com/rosamariafitness?mibextid=LQQJ4d"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://www.linkedin.com/in/rosamariafitness/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          </div>
+
+          <div class="col-md-4 col-12 text-center mb-4 mt-3">
+            <h6><strong>KIRI</strong></h6>
+            <address>Rua Gregório Diegoli, Nº 90,<br>Bairro São Luiz, Brusque - SC</address>
+            <a href="https://www.instagram.com/bonoficial/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://m.facebook.com/b.onoficiall"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <!--<a href="https://www.linkedin.com/in/rosamariafitness/"><i class="fa-brands fa-linkedin fa-lg"></i></a>-->
+          </div>
+      </div>
+
+
+    </footer><!--Fim Terceira Secao-->
+          
+    <div class="text-center">
+          <a class="navbar-brand " href="#">
+            <img src="{% static 'materials/images/rosamaria-logo.png' %}" alt="logo da rosa maria" width="150px">
+          </a>
+    </div>
+
+    {% endblock footer %}
+
+    <script src={% static 'js/bootstrap.bundle.min.js' %} ></script>
+</body>
+</html>

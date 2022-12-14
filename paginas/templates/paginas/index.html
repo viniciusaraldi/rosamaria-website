@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Index {% endblock title %}
+
+{% block content %}
+
+    <main><!--Inicio do conteudo principal -->
+        <section id="about" class="container-fluid row col-12 m-auto"><!--Inicio Primeira Secao-->
+            <div class="container-fluid row col-10 margem-divisao-secao">
+                <div class="col-md-6 mt-4 mb-5">
+                   <a class="nav-link hiperlink-primeira-secao" href="#">Buscamos novas soluções para a sua empresa estar sempre na frente.</a>
+                </div>
+                <div class="col-md-5 texto-justificado"><!--Seção pra texto-->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem distinctio eum optio vitae excepturi laborum sapiente at nostrum labore vero, hic voluptates accusantium reiciendis maxime quod, omnis ratione voluptas numquam!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam veniam nisi sunt dignissimos? Deleniti minima distinctio obcaecati quis rem quia eos ab, ducimus suscipit. Impedit aliquam cupiditate repellat accusamus!</p>
+                </div>
+            </div>
+
+            <div>
+                <video controls poster="{% static 'materials/images/header-carrossel.png' %}" class="container-fluid" width="900px">
+                    <source src="{% static 'materials/videos/blue.mp4' %}" type="video/mp4">
+                    <!--<source src="{% static 'materials/videos/banner.jpg' %}" type="video/webm">
+                    <source src="{% static 'materials/videos/banner.jpg' %}" type="video/ogg">-->
+                    <object>
+                      <embed src="{% static 'materials/videos/exemplo.mp4' %}" type="application/x-shockwave-flash" 
+                      allowfullscreen="false" allowscriptaccess="always">  		
+                    </object>
+                    Formato não suportado  
+                  </video>
+            </div>
+        </section><!--Fim da Primeira Secao-->
+
+        <section id="work" class="container-fluid row col-12 margem-divisao-secao cor-fundo-escuro p-0 imagem-background-segunda-secao"><!--Inicio Segunda Secao-->
+            <div class="col-10 margem-divisao-secao">
+                <div>
+                   <h2 class="titulo-secao">Pesquisa &<br>Desenvolvimento</h2>
+                </div>
+                <div class="col-md-7 text-start"><!--Seção pra texto-->
+                    <p>Estamos constantemente buscando atualizações e novas informações e tecnologias junto às maiores referências do mercado. <strong>Nosso núcleo de Pesquisa & Desenvolvimento</strong>, assim como nossa equipe de criação, está sempre apar das últimas tendências e novidades do setor: Bureaux de moda, feiras e eventos nacionais e internacionais, e fortes relações com os melhores profissionais e fornecedores de matéria-prima do setor</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="col-md-5 col-10 m-1">
+                    <img src="{% static 'materials/images/foto-imagem-secao-primeira.jpg' %}" width="100%" alt="">
+                </div>
+
+                <div class="col-md-5 col-10 m-1">
+                    <img src="{% static 'materials/images/foto-secao-primeira-imagem.jpg' %}" width="100%" alt="">
+                </div>
+            </div>
+
+            <div class="container-fluid row col-10 margem-divisao-secao d-flex justify-content-between p-0">
+                <div>
+                   <h2 class="titulo-secao">Produção, Qualidade e Logística</h2>
+                </div>
+                <div class="col-md-7 col-12"><!--Seção pra texto-->
+                    <p>Grande parte de nossa produção ocorre em nossa unidade de Brusque - SC, sob um rigoroso <strong>controle de qualidade</strong>, inclusive com índices de NQA internacional, acompanhados para que o processo esteja controlado, competitivo e garantido.</p>
+                    <p>Não somente nós, mas também nossos parceiros de negócios e subcontratados são homologados e certiicados pela <strong class="altera-cor-texto-rosa">Abvtex</strong>, garantindo assim seguir todas as legislações vigentes no país, além do compromisso social por uma sociedade mais justa.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'materials/images/fitnesseditar.jpg' %}" width="100%" alt="">
+                    <!--<img src="{% static 'materials/images/banner.jpg' %}" width="100%" alt="">
+                    <img src="{% static 'materials/images/banner.jpg' %}" width="100%" alt="">-->
+                </div>
+            </div>
+        </section><!--Fim da Segunda Seção-->
+
+        <section id="catalog" class="container-fluid row col-12 margem-divisao-secao"><!--Inicio Terceira Secao-->
+            <div class="col-10 margem-divisao-secao">
+                <div>
+                   <h2 class="titulo-secao-terceira-secao">Fit yourself!</h2>
+                </div>
+                <div class="col-md-7 col-12 fonte-terceira-secao"><!--Seção pra texto-->
+                    <p>Oferecemos o que existe de melhor em tecnologia e matéria-prima, para transformar sua marca ou negócio em líderes no segmento.</p>
+                </div>
+                <div class="d-flex justify-content-around fonte-terceira-secao p-2 flex-wrap text-center">
+                    <div class="mb-3"><a class="altera-cor-texto-rosa" href="/categoria/produtos">Venha fazer sua coleção conosco</a></div>
+                    <div><a class="cor-texto-link-terceira-secao-categoria" href="/catalogo">Acesso nosso <strong class="catalago-tericeira-secao">Catálago 2023</strong></a></div>
+                </div>
+            </div>
+
+            <div class="container-fluid row col-12 d-flex justify-content-center m-auto">
+                {% for product in products_list %}
+                    {% if product.sample %}
+                        <div class="container-fluid row col-md-3 col-12 m-2 p-1">
+                            <a href="{{product.get_absolute_url}}">
+                                <img src="{{ product.imagemprimeira.url }}" alt="Imagens do produto {{ product.name }}" width="100%">
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="container-fluid text-center mt-5 mb-3 p-3">
+                <a class="cor-texto-link-terceira-secao-categoria catalago-tericeira-secao" href="#">VER MAIS</a><!--Irá para categorias-->
+            </div>
+
+            <div class="container-fluid text-center mt-4 mb-2">
+                <h2 class="text-dark mb-5">Nossos Clientes</h2>
+            </div>
+
+            <div class="container-fluid row col-12 text-center">
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+            </div>
+        </section><!--Fim Terceira Secao-->
+
+
+        <section id="precos" class="container-fluid row col-12 margem-divisao-secao cor-fundo-escuro p-2 pb-4"><!--Inicio Quarta Secao-->
+            <div class="col-10 margem-divisao-secao">
+                <div>
+                    <h2 class="titulo-secao text-center">Soluções Tecnológicas</h2>
+                </div>
+                <div class="text-center col-md-9 col-12 m-auto"><!--Seção pra texto-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eius veniam iusto dignissimos incidunt fugit nobis non doloremque rerum sapiente totam provident voluptate omnis hic blanditiis facere, repellat officia aperiam! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus expedita quae quia veritatis! Nulla molestias, odit ad unde, suscipit non dignissimos nesciunt aliquid, dolores error provident a? Enim, ipsum!</p>
+                </div>
+            </div>
+
+            <div class="container-fluid row col-12 text-center">
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+                <div class="col-md-3 col-12 mb-3 mt-2">
+                    <img src="{% static 'materials/images/centauro.jpg' %}" width="80%" alt="">
+                </div>
+            </div>
+        </section><!--Fim Quarta Secao-->
+    </main>
+
+{% endblock content %}
+
