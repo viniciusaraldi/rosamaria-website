@@ -30,17 +30,18 @@ SECRET_KEY = 'django-insecure-x_x$$as85m73+n3%_&-^wui(q)%9kdh#egb(d1y7(4!ejo2#o7
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if IS_HEROKU:
+
+'''if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
     ALLOWED_HOSTS = []
-'''
+
 if not IS_HEROKU:
     DEBUG = True'''
 
 DEBUG = False
 
-#ALLOWED_HOSTS = ['rosamaria.net.br/teste']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
