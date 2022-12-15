@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Normalidad Extended Var';
+    src: url("NormalidadExtended-Thin.cdf8812debaf.eot");
+    src: local('Normalidad Extended Var'), local('NormalidadExtended-Thin'),
+        url("NormalidadExtended-Thin.cdf8812debaf.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadExtended-Thin.ebdb330aee74.woff2") format('woff2'),
+        url("NormalidadExtended-Thin.53e62ea1c3cf.woff") format('woff'),
+        url("NormalidadExtended-Thin.09b2e4370c53.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Bold Var';
+    src: url("NormalidadCompact-Bold.50ed96e6fb19.eot");
+    src: local('Normalidad Bold Var'), local('NormalidadCompact-Bold'),
+        url("NormalidadCompact-Bold.50ed96e6fb19.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Bold.cf83cd4bf57d.woff2") format('woff2'),
+        url("NormalidadCompact-Bold.954c6e9865e6.woff") format('woff'),
+        url("NormalidadCompact-Bold.13a2491b95ed.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Compact Var';
+    src: url("NormalidadCompact-Thin.d016bca3344b.eot");
+    src: local('Normalidad Compact Var'), local('NormalidadCompact-Thin'),
+        url("NormalidadCompact-Thin.d016bca3344b.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Thin.5fe4e17f1a57.woff2") format('woff2'),
+        url("NormalidadCompact-Thin.34e404049250.woff") format('woff'),
+        url("NormalidadCompact-Thin.51610c37c7ba.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Black Var';
+    src: url("NormalidadCompact-Black.749f524419d1.eot");
+    src: local('Normalidad Black Var'), local('NormalidadCompact-Black'),
+        url("NormalidadCompact-Black.749f524419d1.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Black.1068c55ff4cc.woff2") format('woff2'),
+        url("NormalidadCompact-Black.d55fd97aa99b.woff") format('woff'),
+        url("NormalidadCompact-Black.c65a61ce10ef.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad UltraExtended Var';
+    src: url("NormalidadUltraExtended-Thin.189aa51401d3.eot");
+    src: local('Normalidad UltraExtended Var'), local('NormalidadUltraExtended-Thin'),
+        url("NormalidadUltraExtended-Thin.189aa51401d3.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadUltraExtended-Thin.b943466698b7.woff2") format('woff2'),
+        url("NormalidadUltraExtended-Thin.49eeea860820.woff") format('woff'),
+        url("NormalidadUltraExtended-Thin.e605e5588d01.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Wide Var';
+    src: url("NormalidadWide-Thin.2eaca20b810e.eot");
+    src: local('Normalidad Wide Var'), local('NormalidadWide-Thin'),
+        url("NormalidadWide-Thin.2eaca20b810e.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadWide-Thin.95c7e61b294f.woff2") format('woff2'),
+        url("NormalidadWide-Thin.ac522f341dc5.woff") format('woff'),
+        url("NormalidadWide-Thin.3ad09c2173ad.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Light Var';
+    src: url("NormalidadCompact-Light.5190389f3213.eot");
+    src: local('Normalidad Light Var'), local('NormalidadCompact-Light'),
+        url("NormalidadCompact-Light.5190389f3213.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Light.9b0949b094bf.woff2") format('woff2'),
+        url("NormalidadCompact-Light.df9b77ddfb97.woff") format('woff'),
+        url("NormalidadCompact-Light.cd43e8851ba8.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Medium Var';
+    src: url("NormalidadCompact-Medium.3f00062de88d.eot");
+    src: local('Normalidad Medium Var'), local('NormalidadCompact-Medium'),
+        url("NormalidadCompact-Medium.3f00062de88d.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Medium.7466fbe20910.woff2") format('woff2'),
+        url("NormalidadCompact-Medium.b96e39851e65.woff") format('woff'),
+        url("NormalidadCompact-Medium.141ea93c9133.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Text Var';
+    src: url("NormalidadText-Thin.0c2cf40a070b.eot");
+    src: local('Normalidad Text Var'), local('NormalidadText-Thin'),
+        url("NormalidadText-Thin.0c2cf40a070b.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadText-Thin.9b8337e1d040.woff2") format('woff2'),
+        url("NormalidadText-Thin.1a6cef1aff55.woff") format('woff'),
+        url("NormalidadText-Thin.703bc46a1c03.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Var';
+    src: url("NormalidadVar-Regular.ff53ac459403.eot");
+    src: local('Normalidad Var'), local('NormalidadVar-Regular'),
+        url("NormalidadVar-Regular.ff53ac459403.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadVar-Regular.654e78eb7c8c.woff2") format('woff2'),
+        url("NormalidadVar-Regular.2681442bdd3f.woff") format('woff'),
+        url("NormalidadVar-Regular.7975b9907ce3.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Thin Var';
+    src: url("NormalidadCompact-Thin_1.a39901f1354b.eot");
+    src: local('Normalidad Thin Var'), local('NormalidadCompact-Thin'),
+        url("NormalidadCompact-Thin_1.a39901f1354b.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Thin_1.da472b331e38.woff2") format('woff2'),
+        url("NormalidadCompact-Thin_1.c2e08ca5a0c2.woff") format('woff'),
+        url("NormalidadCompact-Thin_1.d3b627df1218.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Normalidad Regular Var';
+    src: url("NormalidadCompact-Regular.d0f54ff87568.eot");
+    src: local('Normalidad Regular Var'), local('NormalidadCompact-Regular'),
+        url("NormalidadCompact-Regular.d0f54ff87568.eot?#iefix") format('embedded-opentype'),
+        url("NormalidadCompact-Regular.c20417e753b5.woff2") format('woff2'),
+        url("NormalidadCompact-Regular.74a431540755.woff") format('woff'),
+        url("NormalidadCompact-Regular.b52869b799ee.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,183 @@
+/* GERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Normalidad Regular Var';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    background-color: #f4efe9;
+}
+
+a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #ff83f8 !important;
+}
+
+h2 {
+    color: #ff83f8;
+}
+
+#sobre {
+    z-index: 1000;
+}
+
+
+
+/* FIM GERAL */ 
+
+/* CONFIGURAÇÕES PADRÕES */
+
+.titulo-secao {
+    font-family: 'Normalidad Light Var' !important;
+    padding: 10% 0;
+    font-size: 5em;
+    color: #ff83f8;
+}
+
+/* FIM CONFIGURAÇÕES PADRÕES */
+
+/*.link-borda {
+    font-weight: 800;
+    margin-right: 25px;
+}
+
+.link-sem-borda {
+    margin-top: 3%;
+}*/
+
+/* INICIO DA PRIMEIRA SECAO */
+
+.margem-divisao-secao {
+    margin: 5% auto;
+}
+
+.hiperlink-primeira-secao {
+    color: #ff83f8 !important;
+    font-size: 2em;
+    text-align: start;
+    font-family: 'Normalidad Light Var' !important;
+}
+
+.texto-justificado {
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+/* FIM DA PRIMEIRA SEÇÃO */
+
+/* INICIO DA SEGUNDA SECAO */
+
+.imagem-background-segunda-secao {
+    background: url("/static/materials/images/background-secao.560208a86a35.png") no-repeat top center;
+}
+
+.cor-fundo-escuro {
+    background-color: #31383f;
+    color: #fff;
+}
+
+.altera-cor-texto-rosa {
+    color: #ff83f8;
+}
+
+/* FIM DA SEGUNDA SECAO */
+
+
+/* INICIO DA TERCEIRA SECAO */
+
+
+.titulo-secao-terceira-secao{
+    color: #ff83f8;
+    padding: 10% 0 5%;
+    font-size: 5em;
+    font-family: 'Normalidad Light Var' !important;
+}
+
+.fonte-terceira-secao {
+    font-size: 1.2em;
+}
+
+.cor-texto-link-terceira-secao-categoria{
+    color: #000 !important;
+}
+
+.catalago-tericeira-secao,.catalago-tericeira-secao:hover {
+    text-decoration: underline !important;
+}
+
+/* FIM DA TERCEIRA SECAO */
+
+/* INICIO STYLE CONTATOS */ 
+label {
+    visibility: hidden;
+}
+
+.special1 {
+    border: 1px solid #ff83f8;
+}
+
+
+.special2 {
+    border: 1px solid #ff83f8;
+}
+
+.special3 {
+    border: 1px solid #ff83f8;
+}
+
+.special4 {
+    border: 1px solid #ff83f8;
+}
+
+.special5 {
+    border: 1px solid #ff83f8;
+}
+.special1:hover,.special2:hover,.special3:hover,.special4:hover,.special1:visited,.special2:visited,.special3:visited,.special4:visited {
+    color: #ff83f8;
+    background-color: #f4efe9;
+    border: 1px solid #ff83f8;
+}
+/* FIM STYLE CONTATOS*/
+
+/* INICIO CONFIGURAÇÕES MEDIA QUERIES */
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .titulo-secao {
+        font-size: 2.4em;
+    }
+    .titulo-secao-terceira-secao {
+        font-size: 3em;
+    }
+    .fonte-terceira-secao {
+        font-size: 1.1em;
+    }
+}
+/*
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { }*/
+
+/* FIM CONFIGURAÇÕES MEDIA QUERIES */
+
