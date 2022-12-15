@@ -13,8 +13,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
 from django.test.runner import DiscoverRunner
-#import django_heroku
+from decouple import config
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +28,10 @@ IS_HEROKU = "DYNO" in os.environ
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x_x$$as85m73+n3%_&-^wui(q)%9kdh#egb(d1y7(4!ejo2#o7'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 
 
 '''if IS_HEROKU:
@@ -39,7 +42,7 @@ else:
 if not IS_HEROKU:
     DEBUG = True'''
 
-DEBUG = False
+DEBUG = config('DEBUG',default=False,cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
@@ -100,14 +103,22 @@ MAX_CONN_AGE = 600
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Rosa_website',
         'USER': 'fykakchwhmowzm',
-        'PASSWORD': 'f5902ebb1d413fe58198147dfd5fb0dbebced32b0146e40e50f41da1c1dae192@',
+        'PASSWORD': 'f5902ebb1d413fe58198147dfd5fb0dbebced32b0146e40e50f41da1c1dae192',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+
+if IS_HEROKU:
+    DATABASE_URL = 'postgresql://<postgresql>'
+else:
+    DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 '''DATABASES = {
     'default': {
@@ -120,14 +131,14 @@ DATABASES = {
     }
 }'''
 
-if "DATABASE_URL" in os.environ:
+"""if "DATABASE_URL" in os.environ:
     # Configure Django for DATABASE_URL environment variable.
     DATABASES["default"] = dj_database_url.config(
         conn_max_age=MAX_CONN_AGE, ssl_require=True)
 
     # Enable test database if found in CI environment.
     if "CI" in os.environ:
-        DATABASES["default"]["TEST"] = DATABASES["default"]
+        DATABASES["default"]["TEST"] = DATABASES["default"]"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -172,12 +183,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = 'c7421be5ba380a'
-EMAIL_HOST_PASSWORD = 'edd87fbbc750ce'
-EMAIL_PORT = '2525'
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER= config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD= config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS=True
+EMAIL_PORT =587
+EMAIL_HOST='smtp.gmail.com'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -188,7 +199,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
     
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
@@ -211,4 +222,3 @@ class HerokuDiscoverRunner(DiscoverRunner):
 if "CI" in os.environ:
     TEST_RUNNER = "gettingstarted.settings.HerokuDiscoverRunner"
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
