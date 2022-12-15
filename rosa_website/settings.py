@@ -99,12 +99,23 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'USER': 'fykakchwhmowzm',
+        'PASSWORD': 'f5902ebb1d413fe58198147dfd5fb0dbebced32b0146e40e50f41da1c1dae192@',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'USER': 'databaserosamaria',
         'PASSWORD': 'V1I2N3I4@',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}
+}'''
 
 if "DATABASE_URL" in os.environ:
     # Configure Django for DATABASE_URL environment variable.
