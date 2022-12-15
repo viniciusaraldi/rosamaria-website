@@ -44,7 +44,7 @@ if not IS_HEROKU:
 
 DEBUG = config('DEBUG',default=False,cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['rosa-maria.herokuapp.com']
 
 
 # Application definition
@@ -99,6 +99,20 @@ WSGI_APPLICATION = 'rosa_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# local host banco
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Rosa_website',
+        'USER': 'postgres',
+        'PASSWORD': 'v1i2n3i4',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}'''
+
+
 MAX_CONN_AGE = 600
 
 DATABASES = {
@@ -112,13 +126,12 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-
-
 if IS_HEROKU:
     DATABASE_URL = 'postgresql://<postgresql>'
 else:
     DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 '''DATABASES = {
     'default': {
