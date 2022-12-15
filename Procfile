@@ -1,1 +1,1 @@
-web: gunicorn rosa_website.wsgi --log-file -
+web: bin/start-pgbouncer-stunnel gunicorn rosa_website.wsgi --log-file -

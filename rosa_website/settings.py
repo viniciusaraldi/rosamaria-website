@@ -235,3 +235,4 @@ class HerokuDiscoverRunner(DiscoverRunner):
 if "CI" in os.environ:
     TEST_RUNNER = "gettingstarted.settings.HerokuDiscoverRunner"
 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rosa_website.settings.dev")
