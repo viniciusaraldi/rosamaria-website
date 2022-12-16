@@ -1,1 +1,1 @@
-web: bundle exec rails server -p $PORT
+web: gunicorn rosa_website.wsgi:application
