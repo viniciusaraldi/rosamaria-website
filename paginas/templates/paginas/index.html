@@ -82,7 +82,7 @@
 
             <div class="container-fluid row col-12 d-flex justify-content-center m-auto">
                 {% for product in products_list %}
-                    {% if product.sample %}
+                    {% if product.destaque %}
                         <div class="container-fluid row col-md-3 col-12 m-2 p-1">
                             <a href="{{product.get_absolute_url}}">
                                 <img src="{{ product.imagemprimeira.url }}" alt="Imagens do produto {{ product.name }}" width="100%">

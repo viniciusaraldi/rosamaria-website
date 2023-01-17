@@ -54,7 +54,7 @@ class Products(models.Model):
     imagemquarta = models.ImageField(upload_to="paginas3",blank=False,default=False)
     status = models.TextField(choices=STATUS,max_length=10,default='INATIVO')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    sample = models.BooleanField(default=False,verbose_name='Destaque?')
+    destaque = models.BooleanField(default=False,verbose_name='Destaque?')
 
     #def get_absolute_url(self):
     #    return reverse('post_detail',args=[self.slug])
