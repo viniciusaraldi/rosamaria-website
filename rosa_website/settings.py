@@ -121,7 +121,7 @@ DATABASES = {
         'NAME': 'dbbols0rvstjb4',
         'USER': 'bzstcdyigsjfaq',
         'PASSWORD': 'd6d373dc734267030a176a0c704a3a2dec5703b00e03dd143bdc2bd0ffebc815',
-        'HOST': '127.0.0.1',
+        'HOST': 'ec2-54-160-109-68.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
