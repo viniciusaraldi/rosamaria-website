@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'rosa_website.wsgi.application'
 
 # local host banco
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Rosa_website',
@@ -110,17 +110,17 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}
+}'''
 
-'''
+
 MAX_CONN_AGE = 600
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Rosa_website',
-        'USER': 'fykakchwhmowzm',
-        'PASSWORD': 'f5902ebb1d413fe58198147dfd5fb0dbebced32b0146e40e50f41da1c1dae192',
+        'USER': 'bzstcdyigsjfaq',
+        'PASSWORD': 'd6d373dc734267030a176a0c704a3a2dec5703b00e03dd143bdc2bd0ffebc815',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -131,7 +131,7 @@ if IS_HEROKU:
 else:
     DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)'''
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 '''DATABASES = {
     'default': {
