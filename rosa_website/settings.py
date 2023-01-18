@@ -118,7 +118,7 @@ MAX_CONN_AGE = 600
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Rosa_website',
+        'NAME': 'dbbols0rvstjb4',
         'USER': 'bzstcdyigsjfaq',
         'PASSWORD': 'd6d373dc734267030a176a0c704a3a2dec5703b00e03dd143bdc2bd0ffebc815',
         'HOST': '127.0.0.1',
