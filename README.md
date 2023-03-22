@@ -2,4 +2,4 @@
 
 Projeto construido com a parceria da empresa Rosa Maria Fitness
 
-Documentação:
+Esse projeto é somente um esboço do trabalho.
